@@ -4,11 +4,6 @@ import path from "path";
 
 const app = express();
 
-// Inicio del servidor - puerto
-app.listen(3000, () => {
-  console.log("Servidor de Sweet & Coffee corriendo en el puerto 3000");
-});
-
 // Middleware para procesar JSON en el req.body
 app.use(express.json());
 
@@ -16,7 +11,6 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Bienvenido a la API Oficial de Pedidos y Menú de Sweet & Coffee");
 });
-
 
 
 // Caso real: Envío de la orden de un café personalizado
